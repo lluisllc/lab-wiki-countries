@@ -5,17 +5,22 @@ import CountriesList from "./components/CountriesList";
 import { Routes, Route } from "react-router-dom";
 // eslint-disable-next-line
 import countriesData from "./countries.json";
+import CountryDetails from "./components/CountryDetails";
 
 function App() {
   return <div className="App">
     <Navbar />
     <CountriesList />
-    {/* <Routes>
+    <Routes>
       <Route
-        path="/Countries-list"
+        path="/countries-list"
         element={<CountriesList countries={countriesData} />}
       />
-    </Routes> */}
+      <Route
+        path="/country-details/:id"
+        element={<CountryDetails />}
+      />
+    </Routes>
   </div>;
 }
 export default App;

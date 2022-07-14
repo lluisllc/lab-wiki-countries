@@ -10,14 +10,13 @@ function CountriesList() {
         // eslint-disable-next-line
     }, [])
     return (
-
         <div className="container">
             <div className="row">
                 <div className="col-5">
                     <div className="list-group">
                         {countries.map((e, index) => {
                             return (
-                                <a key={index} className="list-group-item list-group-item-action" href="/">{e.name.official}</a>
+                                <Link to={`/country-details/${e.alpha3Code}`}><p>{e.name.common}</p></Link>
                             )
                         })}
                     </div>
